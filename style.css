@@ -681,8 +681,62 @@ h2+.steps {
     transition: left .7s ease
 }
 
+/* Sembunyikan tampilan bawaan Google Translate */
+.skiptranslate iframe,
+.goog-te-banner-frame {
+    display: none !important
+}
+
+body {
+    top: 0 !important
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important
+}
+
+/* Tombol bahasa */
+#menu {
+    margin-left: auto
+}
+
+.lang {
+    display: flex;
+    margin-left: 24px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px
+}
+
+.lang button {
+    background: none;
+    border: 0;
+    color: var(--muted);
+    font: 600 .8rem var(--body);
+    padding: 5px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: .2s
+}
+
+.lang button.on {
+    background: var(--a2);
+    color: #fff
+}
+
 /* RESPONSIF */
 @media (max-width:860px) {
+    .lang {
+        margin-left: auto;
+        margin-right: 10px
+    }
+
     .hero {
         grid-template-columns: 1fr;
         padding-top: 44px

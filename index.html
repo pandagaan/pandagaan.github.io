@@ -8,17 +8,16 @@
     <meta name="description" content="Portofolio aplikasi yang sudah saya bangun, dari ide sampai rilis.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
+    <div id="google_translate_element" style="display:none"></div>
     <header class="nav">
-        <a href="#top" class="logo">Pandaga <span> Adhikara Nusantara</span></a>
+        <a href="#top" class="logo" translate="no">Pandaga <span> Adhikara Nusantara</span></a>
         <button class="burger" aria-label="Buka menu" aria-expanded="false"
             onclick="toggleMenu(this)"><i></i><i></i></button>
         <nav id="menu">
@@ -27,6 +26,14 @@
             <a href="#proses">Cara kerja</a>
             <a href="#kontak" class="btn btn-small">Ajak kerja sama</a>
         </nav>
+
+        <div class="lang" role="group" aria-label="Pilih bahasa" translate="no">
+            <button type="button" data-lang="id" class="on">ID</button>
+            <button type="button" data-lang="en">EN</button>
+        </div>
+        <button class="burger" aria-label="Buka menu" aria-expanded="false"
+            onclick="toggleMenu(this)"><i></i><i></i>
+        </button>
     </header>
 
     <main id="top">
@@ -37,8 +44,8 @@
                 <!-- <p class="badge"><span class="dot"></span> Terbuka untuk proyek baru</p> -->
                 <h1 data-aos="fade-up" data-aos-duration="900">Aplikasi yang dipakai orang setiap hari, dibuat dengan
                     rapi.</h1>
-                <p class="lead" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900"><strong>Pandaga Adhikara
-                        Nusantara</strong> membangun solusi digital dari ide hingga
+                <p class="lead" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900"><strong translate="no">Pandaga Adhikara
+                        Nusantara </strong> membangun solusi digital dari ide hingga
                     menjadi produk yang siap digunakan.
                 </p>
                 <div class="cta" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
@@ -55,7 +62,6 @@
             <div class="hero-visual logo-visual" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1200"
                 aria-hidden="true">
                 <div class="logo-glow"></div>
-                <div class="logo-ring"></div>
                 <img src="images/logo.png" alt="Logo Pandaga Adhikara Nusantara">
             </div>
         </section>
@@ -73,7 +79,7 @@
                         <img src="images/smartrespon.png" alt="Tampilan aplikasi SmartRespon" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>SMART RESPON APP</h3>
+                        <h3 translate="no">SMART RESPON APP</h3>
                         <p>Aplikasi milik Dinas Sosial PPKB dan P3A Kabupaten Wonogiri yang digunakan untuk monitoring
                             dan pendataan sosial masyarakat. Dilengkapi fitur geotagging lokasi rumah untuk memudahkan
                             pemantauan, validasi data, dan evaluasi program sosial.
@@ -92,7 +98,7 @@
                         <img src="images/nrw.png" alt="Tampilan aplikasi NRW" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>Non Revenue Water App</h3>
+                        <h3 translate="no">Non Revenue Water App</h3>
                         <p>Aplikasi milik PDAM Giri Tirta Sari Kabupaten Wonogiri, aplikasi ini digunakan untuk
                             memonitoring jumlah debit air yang terbuang di Kabupaten Wonogiri.
                         </p>
@@ -109,7 +115,7 @@
                         <img src="images/sidasi.png" alt="Tampilan aplikasi Sidasi" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>SIDASI</h3>
+                        <h3 translate="no">SIDASI</h3>
                         <p>Aplikasi milik Balai Besar Wilayah Sungai Citarum. Aplikasi ini menyediakan portal berita,
                             dan juga dapat menampilkan data aliran sungai yang berada di wilayah kerja Balai Besar
                             Wilayah Sungai Citarum. Data aliran sungai dapat ditampilkan dalam bentuk grafik dan peta
@@ -128,7 +134,7 @@
                         <img src="images/ddsk.png" alt="Tampilan aplikasi DDSK" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>DATA DASAR SOSIAL KEPENDUDUKAN</h3>
+                        <h3 translate="no">DATA DASAR SOSIAL KEPENDUDUKAN</h3>
                         <p>
                             Aplikasi DDSK merupakan aplikasi milik Dinas Sosial PPKB dan P3A Kabupaten Wonogiri.
                             Aplikasi ini berfokus pada pendataan data penduduk yang berada di Kabupaten Wonogiri, data
@@ -148,7 +154,7 @@
                         <img src="images/simawar.png" alt="Tampilan aplikasi Simawar" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>SISTEM MANAJEMEN ARSIP WARKAH</h3>
+                        <h3 translate="no">SISTEM MANAJEMEN ARSIP WARKAH</h3>
                         <p>
                             Aplikasi ini merupakan aplikasi yang digunakan untuk proses monitoring arsip dokumen yang
                             ada di Kementrian dan Tata / Ruang Badan Pertanahan Nasional.
@@ -165,7 +171,7 @@
                         <img src="images/simap.png" alt="Tampilan aplikasi Simap" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>SISTEM MANAJEMEN PENGADAAN</h3>
+                        <h3 translate="no">SISTEM MANAJEMEN PENGADAAN</h3>
                         <p>
                             Sistem Manajemen Pengadaan merupakan aplikasi milik PDAM Giri Tirta Sari Kabupaten Wonogiri,
                             aplikasi ini digunakan untuk memonitoring proses pengadaan barang dan jasa yang dilakukan
@@ -183,7 +189,7 @@
                         <img src="images/rusip.png" alt="Tampilan aplikasi Rumah Arsip" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>RUMAH ARSIP</h3>
+                        <h3 translate="no">RUMAH ARSIP</h3>
                         <p>
                             Aplikasi milik kantor pertanahan Bangka Selatan, aplikasi ini digunakan untuk memonitoring
                             arsip dokumen yang ada di kantor pertanahan Bangka Selatan.
@@ -201,7 +207,7 @@
                             loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>SISTEM INFORMASI KELOMPOK USAHA BERSAMA</h3>
+                        <h3 translate="no">SISTEM INFORMASI KELOMPOK USAHA BERSAMA</h3>
                         <p>
                             Aplikasi ini merupakan aplikasi milik Dinas Sosial PPKB dan P3A Kabupaten Wonogiri, aplikasi
                             ini digunakan untuk memonitoring data kelompok usaha bersama yang ada di Kabupaten Wonogiri.
@@ -218,7 +224,7 @@
                         <img src="images/ajeg.png" alt="Tampilan aplikasi Kasir Ajeg" loading="lazy">
                     </div>
                     <div class="body">
-                        <h3>KASIR AJEG BILLIARD</h3>
+                        <h3 translate="no">KASIR AJEG BILLIARD</h3>
                         <p>
                             Aplikasi ini merupakan aplikasi kasir yang terintegrasi dengan IoT sistem lampu pada setiap
                             meja billiard.
@@ -331,6 +337,45 @@
                 setTimeout(function () { e.detail.removeAttribute('data-aos'); }, 1200);
             }
         });
+    </script>
+
+    <script>
+        /* ===== Ganti bahasa dengan Google Translate ===== */
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'id',
+                includedLanguages: 'id,en',   // tambah bahasa lain di sini, contoh: 'id,en,ar,ja'
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function getLang() {
+            var m = document.cookie.match(/googtrans=\/id\/(\w+)/);
+            return m ? m[1] : 'id';
+        }
+
+        function setLang(lang) {
+            var host = location.hostname;
+            if (lang === 'id') {
+                var past = 'googtrans=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';
+                document.cookie = past;
+                document.cookie = past + ';domain=' + host;
+            } else {
+                var val = 'googtrans=/id/' + lang + ';path=/';
+                document.cookie = val;
+                document.cookie = val + ';domain=' + host;
+            }
+            location.reload();
+        }
+
+        document.querySelectorAll('.lang button').forEach(function (b) {
+            b.classList.toggle('on', b.dataset.lang === getLang());
+            b.onclick = function () { setLang(b.dataset.lang); };
+        });
+
+        var gt = document.createElement('script');
+        gt.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        document.body.appendChild(gt);
     </script>
 </body>
 
