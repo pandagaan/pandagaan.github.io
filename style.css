@@ -10,8 +10,8 @@
     --a2: #7c6cff;
     /* aksen kedua */
     --a3: #35e0c2;
-    --display: 'Bricolage Grotesque', system-ui, sans-serif;
-    --body: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --display: 'Poppins', system-ui, sans-serif;
+    --body: 'Poppins', system-ui, sans-serif;
 }
 
 * {
@@ -618,6 +618,68 @@ h2+.steps {
     animation: float 6s ease-in-out infinite
 }
 
+/* Cahaya berdenyut di belakang logo */
+.logo-glow {
+    animation: pulse 4.5s ease-in-out infinite
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.08);
+        opacity: .8
+    }
+}
+
+/* Cincin orbit berputar dengan satu titik cahaya */
+.logo-ring {
+    position: absolute;
+    width: min(600px, 115%);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1.5px dashed rgba(124, 108, 255, .45);
+    animation: spin 40s linear infinite
+}
+
+.logo-ring::after {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+    border-radius: 50%;
+    background: var(--a3);
+    box-shadow: 0 0 18px 4px rgba(53, 224, 194, .7)
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+/* Kilau lewat di tombol utama saat disorot */
+.btn:not(.btn-ghost):not(.btn-small) {
+    position: relative;
+    overflow: hidden
+}
+
+.btn:not(.btn-ghost):not(.btn-small)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .55), transparent);
+    transform: skewX(-20deg)
+}
+
+.btn:not(.btn-ghost):not(.btn-small):hover::after {
+    left: 140%;
+    transition: left .7s ease
+}
 
 /* RESPONSIF */
 @media (max-width:860px) {
