@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -31,8 +31,7 @@
             <button type="button" data-lang="id" class="on">ID</button>
             <button type="button" data-lang="en">EN</button>
         </div>
-        <button class="burger" aria-label="Buka menu" aria-expanded="false"
-            onclick="toggleMenu(this)"><i></i><i></i>
+        <button class="burger" aria-label="Buka menu" aria-expanded="false" onclick="toggleMenu(this)"><i></i><i></i>
         </button>
     </header>
 
@@ -42,9 +41,13 @@
         <section class="hero wrap">
             <div class="hero-text">
                 <!-- <p class="badge"><span class="dot"></span> Terbuka untuk proyek baru</p> -->
-                <h1 data-aos="fade-up" data-aos-duration="900">Aplikasi yang dipakai orang setiap hari, dibuat dengan
-                    rapi.</h1>
-                <p class="lead" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900"><strong translate="no">Pandaga Adhikara
+                <h1 class="typing" translate="no" data-aos="fade-up" data-aos-duration="900"
+                    aria-label="Aplikasi yang dipakai orang setiap hari, dibuat dengan rapi.">
+                    <span id="typed">Aplikasi yang dipakai orang setiap hari, dibuat dengan rapi.</span><span
+                        class="caret" aria-hidden="true"></span>
+                </h1>
+                <p class="lead" data-aos="fade-up" data-aos-delay="200" data-aos-duration="900"><strong
+                        translate="no">Pandaga Adhikara
                         Nusantara </strong> membangun solusi digital dari ide hingga
                     menjadi produk yang siap digunakan.
                 </p>
@@ -236,6 +239,23 @@
                         </ul>
                     </div>
                 </article>
+
+                <article class="card">
+                    <div class="shot">
+                        <img src="images/absensi.webp" alt="Tampilan aplikasi Absensi Siswa, Guru dan Staff " loading="lazy">
+                    </div>
+                    <div class="body">
+                        <h3 translate="no">ABSENSI SISWA, GURU DAN STAFF SMK MUHAMMADIYAH 1 TEGAL</h3>
+                        <p>
+                            Aplikasi ini merupakan aplikasi absensi yang digunakan untuk memonitoring kehadiran siswa, guru dan staff SMK Muhammadiyah 1 Tegal. Aplikasi dilengkapi dengan face recognition dan QR code untuk memudahkan proses absensi, serta geolocation yang dapat memantau lokasi absensi.
+                        </p>
+                        <ul class="tags">
+                            <li>Laravel</li>
+                            <li>Python</li>
+                            <li>Leaflet</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
             <div class="more" style="margin-top: 2rem; text-align: center;">
                 <h3>Dan masih banyak aplikasi yang telah kami kerjakan ... </h3>
@@ -294,89 +314,11 @@
     </main>
 
     <footer class="wrap foot">© <span id="yr">2026</span> Pandaga Adhikara Nusantara</footer>
-
-    <script>
-        function toggleMenu(b) { var o = document.getElementById('menu').classList.toggle('open'); b.setAttribute('aria-expanded', o) }
-        document.querySelectorAll('#menu a').forEach(function (a) { a.onclick = function () { document.getElementById('menu').classList.remove('open') } });
-        document.getElementById('yr').textContent = new Date().getFullYear();
-    </script>
-
+    <script src="assets/js/toggle.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        function toggleMenu(b) { var o = document.getElementById('menu').classList.toggle('open'); b.setAttribute('aria-expanded', o) }
-        document.querySelectorAll('#menu a').forEach(function (a) { a.onclick = function () { document.getElementById('menu').classList.remove('open') } });
-        document.getElementById('yr').textContent = new Date().getFullYear();
+    <script src="assets/js/aos-custom.js"></script>
 
-        /* ===== Animasi AOS ===== */
-        // setAos(selector, jenis animasi, jeda antar elemen (ms), jumlah kolom)
-        function setAos(sel, anim, step, cols) {
-            document.querySelectorAll(sel).forEach(function (el, i) {
-                el.setAttribute('data-aos', anim);
-                if (step) el.setAttribute('data-aos-delay', (i % (cols || 3)) * step);
-            });
-        }
-
-        setAos('section h2, .sub, .more', 'fade-up');     // judul tiap section
-        setAos('.card', 'fade-up', 120, 3);               // kartu proyek, bergantian per kolom
-        setAos('.skills > div', 'fade-up', 100, 4);
-        setAos('.steps li', 'fade-up', 120, 4);
-        setAos('.contact', 'zoom-in');
-
-        AOS.init({
-            duration: 700,
-            easing: 'ease-out-cubic',
-            once: true,        // animasi hanya sekali, tidak berulang saat scroll naik
-            offset: 80,
-            disable: function () { return window.matchMedia('(prefers-reduced-motion: reduce)').matches; }
-        });
-        window.addEventListener('load', function () { AOS.refresh(); });
-
-        // Supaya efek hover kartu tetap cepat setelah animasi masuk selesai
-        document.addEventListener('aos:in', function (e) {
-            if (e.detail.classList.contains('card')) {
-                setTimeout(function () { e.detail.removeAttribute('data-aos'); }, 1200);
-            }
-        });
-    </script>
-
-    <script>
-        /* ===== Ganti bahasa dengan Google Translate ===== */
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'id',
-                includedLanguages: 'id,en',   // tambah bahasa lain di sini, contoh: 'id,en,ar,ja'
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-
-        function getLang() {
-            var m = document.cookie.match(/googtrans=\/id\/(\w+)/);
-            return m ? m[1] : 'id';
-        }
-
-        function setLang(lang) {
-            var host = location.hostname;
-            if (lang === 'id') {
-                var past = 'googtrans=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';
-                document.cookie = past;
-                document.cookie = past + ';domain=' + host;
-            } else {
-                var val = 'googtrans=/id/' + lang + ';path=/';
-                document.cookie = val;
-                document.cookie = val + ';domain=' + host;
-            }
-            location.reload();
-        }
-
-        document.querySelectorAll('.lang button').forEach(function (b) {
-            b.classList.toggle('on', b.dataset.lang === getLang());
-            b.onclick = function () { setLang(b.dataset.lang); };
-        });
-
-        var gt = document.createElement('script');
-        gt.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        document.body.appendChild(gt);
-    </script>
+    <script src="assets/js/translate.js"></script>
 </body>
 
 </html>

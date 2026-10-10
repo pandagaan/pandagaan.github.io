@@ -730,8 +730,34 @@ body {
     color: #fff
 }
 
+/* Efek mengetik */
+.typing {
+    min-height: 3.7em
+}
+
+/* tinggi tetap supaya halaman tidak loncat saat teks berganti */
+.caret {
+    display: inline-block;
+    width: .07em;
+    height: .95em;
+    margin-left: .08em;
+    vertical-align: -.1em;
+    background: var(--a1);
+    animation: blink 1s steps(1) infinite
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0
+    }
+}
+
 /* RESPONSIF */
 @media (max-width:860px) {
+    .typing {
+        min-height: 6em
+    }
+
     .lang {
         margin-left: auto;
         margin-right: 10px
